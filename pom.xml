@@ -5,7 +5,7 @@
 
 	<groupId>net.jade-dungeon</groupId>
 	<artifactId>jadelibs-java</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
 	<name>java lib base</name>
 	<url>https://github.com/Jade-Shan/jadelibs-java</url>
@@ -15,6 +15,8 @@
 		<java.version>1.8</java.version>
 		<!-- mudule version 
 		<jadeutils.version>0.1.10</jadeutils.version>
+		<opencv.version>3.1.0</opencv.version>
+		<opencv.path>/usr/local/share/OpenCV/java/opencv-310.jar</opencv.path>
 				 -->
 		<!-- 3rd libs -->
 		<scala.version.floor>2.11</scala.version.floor>
@@ -27,8 +29,6 @@
 		<javadiffutils.version>1.2.1</javadiffutils.version>
 		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
 		<ezvcard.version>0.9.9</ezvcard.version>
-		<opencv.version>3.1.0</opencv.version>
-		<opencv.path>/usr/local/share/OpenCV/java/opencv-310.jar</opencv.path>
 		<jacoco-maven-plugin.version>0.7.5.201505241946</jacoco-maven-plugin.version>
 		<scala-maven-plugin.version>3.1.6</scala-maven-plugin.version>
 		<maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
@@ -212,6 +212,7 @@
 				<artifactId>ez-vcard</artifactId>
 				<version>${ezvcard.version}</version>
 			</dependency>
+			<!-- 
 			<dependency>
 				<groupId>org.opencv</groupId>
 				<artifactId>opencv</artifactId>
@@ -219,6 +220,7 @@
 				<systemPath>${opencv.path}</systemPath>
 				<scope>system</scope>
 			</dependency>
+					 -->
 			<dependency>
 				<groupId>org.jsoup</groupId>
 				<artifactId>jsoup</artifactId>
