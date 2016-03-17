@@ -5,7 +5,7 @@
 
 	<groupId>net.jade-dungeon</groupId>
 	<artifactId>jadelibs-java</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<packaging>pom</packaging>
 	<name>java lib base</name>
 	<url>https://github.com/Jade-Shan/jadelibs-java</url>
@@ -13,54 +13,50 @@
 	<properties>
 		<charset.encoding>UTF-8</charset.encoding>
 		<java.version>1.8</java.version>
-		<!-- mudule version 
-		<jadeutils.version>0.1.10</jadeutils.version>
-		<opencv.version>3.1.0</opencv.version>
-		<opencv.path>/usr/local/share/OpenCV/java/opencv-310.jar</opencv.path>
-				 -->
-		<!-- 3rd libs -->
-		<scala.version.floor>2.11</scala.version.floor>
-		<scala.version>[2.11.0,2.11.7]</scala.version>
-		<scalatest.version>[2.2.0,2.2.5]</scalatest.version>
-		<logback.version>1.0.13</logback.version>
-		<jsoup.version>1.8.1</jsoup.version>
-		<json.version>20140107</json.version>
-		<rhino.version>1.7R4</rhino.version>
-		<javadiffutils.version>1.2.1</javadiffutils.version>
-		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
-		<ezvcard.version>0.9.9</ezvcard.version>
+		<!-- plugins -->
 		<jacoco-maven-plugin.version>0.7.5.201505241946</jacoco-maven-plugin.version>
-		<scala-maven-plugin.version>3.1.6</scala-maven-plugin.version>
 		<maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
 		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
 		<cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
 		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+		<!-- test -->
+		<junit.version>4.10</junit.version>
+		<greenmail.version>1.3.1b</greenmail.version>
+		<!-- jsp/servlet -->
+		<springframework.version>3.0.5.RELEASE</springframework.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<jsp-api.version>2.3.1</jsp-api.version>
+		<jstl.version>1.2.5</jstl.version>
+		<jett-maven-plg.version>9.3.0.M2</jett-maven-plg.version>
+		<cargo-maven2.version>1.4.8</cargo-maven2.version>
+		<!-- data -->
+		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
+		<xmemcached.version>1.4.1</xmemcached.version>
+		<mongo-java-driver.version>2.12.4</mongo-java-driver.version>
+		<mysql-connector-java.version>5.1.13</mysql-connector-java.version>
+		<hibernate.version>3.6.1.Final</hibernate.version>
+		<!-- log -->
+		<logback.version>1.0.13</logback.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.0</slf4j.version>
+		<!-- parser -->
+		<jsoup.version>1.8.1</jsoup.version>
+		<json.version>20140107</json.version>
+		<jackson-mapper-asl.version>1.7.1</jackson-mapper-asl.version>
+		<!-- 3rd libs -->
+		<rhino.version>1.7R4</rhino.version>
+		<javadiffutils.version>1.2.1</javadiffutils.version>
+		<ezvcard.version>0.9.9</ezvcard.version>
 		<kaptcha.version>2.3.2</kaptcha.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-io.version>2.4</commons-io.version>
 		<commons-fileupload.version>1.3</commons-fileupload.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
-		<jackson-mapper-asl.version>1.7.1</jackson-mapper-asl.version>
 		<jopt-simple.version>4.4</jopt-simple.version>
 		<javassist.version>3.4.GA</javassist.version>
-		<springframework.version>3.0.5.RELEASE</springframework.version>
-		<hibernate.version>3.6.1.Final</hibernate.version>
-		<xmemcached.version>1.4.1</xmemcached.version>
-		<mongo-java-driver.version>2.12.4</mongo-java-driver.version>
-		<mysql-connector-java.version>5.1.13</mysql-connector-java.version>
-		<servlet-api.version>3.1.0</servlet-api.version>
-		<jsp-api.version>2.3.1</jsp-api.version>
-		<jstl.version>1.2.5</jstl.version>
-		<junit.version>4.10</junit.version>
 		<httpclient.version>4.3.6</httpclient.version>
-		<greenmail.version>1.3.1b</greenmail.version>
 		<javamail.version>1.4.1</javamail.version>
-		<json4s.version>3.2.11</json4s.version>
-		<jsoup.version>1.8.1</jsoup.version>
 		<commonscli.version>1.3</commonscli.version>
-		<jett-maven-plg.version>9.3.0.M2</jett-maven-plg.version>
 	</properties>
 
 	<dependencyManagement>
@@ -268,44 +264,7 @@
 				<artifactId>commons-cli</artifactId>
 				<version>${commonscli.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.jsoup</groupId>
-				<artifactId>jsoup</artifactId>
-				<version>${jsoup.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.json4s</groupId>
-				<artifactId>json4s-jackson_${scala.version.floor}</artifactId>
-				<version>${json4s.version}</version>
-			</dependency>
-			<!-- -->
-			<dependency>
-				<groupId>org.scala-lang</groupId>
-				<artifactId>scala-library</artifactId>
-				<version>${scala.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.scala-lang</groupId>
-				<artifactId>scala-compiler</artifactId>
-				<version>${scala.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.scala-lang</groupId>
-				<artifactId>scala-reflect</artifactId>
-				<version>${scala.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.scala-lang</groupId>
-				<artifactId>scala-actors</artifactId>
-				<version>${scala.version}</version>
-			</dependency>
 			<!-- for test scope -->
-			<dependency>
-				<groupId>org.scalatest</groupId>
-				<artifactId>scalatest_${scala.version.floor}</artifactId>
-				<version>${scalatest.version}</version>
-				<scope>test</scope>
-			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -328,23 +287,13 @@
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>${maven-compiler-plugin.version}</version>
-					<configuration>
-						<source>${java.version}</source>
-						<target>${java.version}</target>
-						<encoding>${charset.encoding}</encoding>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>net.alchim31.maven</groupId>
-					<artifactId>scala-maven-plugin</artifactId>
-					<version>${scala-maven-plugin.version}</version>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>${maven-resources-plugin.version}</version>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -355,6 +304,11 @@
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
 					<version>${jett-maven-plg.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.cargo</groupId>
+					<artifactId>cargo-maven2-plugin</artifactId>
+					<version>${cargo-maven2.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -381,7 +335,7 @@
 				</configuration>
 			</plugin>
 			<!-- =========================== -->
-			<!--   compile scala             -->
+			<!--   compile java              -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -401,59 +355,12 @@
 				</executions>
 			</plugin>
 			<!-- =========================== -->
-			<!--    run scala application    -->
-			<!-- =========================== -->
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-				<artifactId>scala-maven-plugin</artifactId>
-				<configuration>
-					<scalaVersion>${scala.version}</scalaVersion>
-					<scalaCompatVersion>${scala.version.floor}</scalaCompatVersion>
-					<jvmArgs>
-						<jvmArg>-client</jvmArg>
-						<jvmArg>-Xms64m</jvmArg>
-						<jvmArg>-Xmx1024m</jvmArg>
-					</jvmArgs>
-					<args>
-						<!-- <arg>-unchecked</arg> -->
-						<!-- <arg>-explaintypes</arg> -->
-						<arg>-feature</arg>
-						<arg>-deprecation</arg>
-					</args>
-					<launchers>
-						<launcher>
-							<id>foo</id>
-							<mainClass>example.ScalaAppExample</mainClass>
-							<args>
-								<arg>Hello</arg>
-								<arg>World</arg>
-							</args>
-						</launcher>
-					</launchers>
-				</configuration>
-				<executions>
-					<execution><!-- do "scala:compile" when "compile" -->
-						<id>compile-scala</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-					<execution><!-- do "scala:testCompile" when "test-compile" -->
-						<id>compile-scala-test</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>testCompile</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- =========================== -->
 			<!--        surefire test        -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
 				<configuration>
 					<includes>
 						<include>**/*Test.java</include>
