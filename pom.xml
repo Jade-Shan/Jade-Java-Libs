@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.jade-dungeon</groupId>
 	<artifactId>jadelibs-java</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>pom</packaging>
 	<name>java lib base</name>
+	<description>My Persional Java Lib configure</description>
 	<url>https://github.com/Jade-Shan/jadelibs-java</url>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License v3 (GPL-3)</name>
+			<url>https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Qiwei Shan</name>
+			<email>evokeralucard@gmail.com</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git@github.com:Jade-Shan/Jade-Java-Libs.git</connection>
+		<developerConnection>scm:git:git@github.com:Jade-Shan/Jade-Java-Libs.git</developerConnection>
+		<url>git@github.com:Jade-Shan/Jade-Java-Libs.git</url>
+	  <tag>jadelibs-java-1.0.7</tag>
+  </scm>
 
 	<properties>
 		<charset.encoding>UTF-8</charset.encoding>
@@ -445,7 +466,76 @@
 				<profiles.scope.compile>provided</profiles.scope.compile>
 				<profiles.scope.runtime>provided</profiles.scope.runtime>
 			</properties>
-			<build><filters><filter>params-prd.properties</filter></filters></build>
+			<build>
+				<filters><filter>params-prd.properties</filter></filters>
+				<plugins>
+					<!-- Source -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals><goal>jar-no-fork</goal></goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- Javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals><goal>jar</goal></goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- GPG -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.5</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals><goal>sign</goal></goals>
+								<configuration>
+									<keyname>C97AEB0C</keyname>
+									<passphraseServerId>C97AEB0C</passphraseServerId>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- sonatype maven center repo -->
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>1.6.3</version>
+						<extensions>true</extensions>
+						<!-- -->
+						<configuration>
+							<serverId>oss</serverId>
+							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			<!-- center remo -->
+			<distributionManagement>
+				<snapshotRepository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
 		</profile>
 	</profiles>
 
