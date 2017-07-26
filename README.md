@@ -4,7 +4,12 @@ Jade-Java-libs
 TODO
 ----------------------
 
-### 1.0.10-SNAPSHOT
+### 1.0.11-SNAPSHOT
+
+Change logs
+----------------------
+
+### 1.0.10
 
 * add slf4j-log4j12
 * add slf4j-simple
