@@ -11,9 +11,10 @@ Change logs
 
 ### 1.0.10
 
-* add slf4j-log4j12
-* add slf4j-simple
-* add junit-interface
+* :heavy_plus_sign: add slf4j-log4j12
+* :heavy_plus_sign: add slf4j-simple
+* :heavy_plus_sign: add junit-interface
+* :wrench: change junit test case postfix: add `**/*Spec.java`
 
 提交说明
 -------------------

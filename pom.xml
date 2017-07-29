@@ -402,6 +402,7 @@
 				<configuration>
 					<includes>
 						<include>**/*Test.java</include>
+						<include>**/*Spec.java</include>
 						<include>**/UnitTestSuite.java</include>
 					</includes>
 					<excludes>
