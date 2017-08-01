@@ -14,6 +14,7 @@ Change logs
 * :heavy_plus_sign: add slf4j-log4j12
 * :heavy_plus_sign: add slf4j-simple
 * :heavy_plus_sign: add junit-interface
+* :heavy_plus_sign: add javamelody
 * :wrench: change junit test case postfix: add `**/*Spec.java`
 
 提交说明
