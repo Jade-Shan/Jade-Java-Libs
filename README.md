@@ -11,6 +11,7 @@ Change logs
 
 ### 1.0.10
 
+* :heavy_plus_sign: add hikaricp as JDBC Connection Pool framework
 * :heavy_plus_sign: add slf4j-log4j12
 * :heavy_plus_sign: add slf4j-simple
 * :heavy_plus_sign: add junit-interface

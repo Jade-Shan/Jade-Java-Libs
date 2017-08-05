@@ -52,6 +52,7 @@
 		<jett-maven-plg.version>9.3.0.M2</jett-maven-plg.version>
 		<cargo-maven2.version>1.4.8</cargo-maven2.version>
 		<!-- data -->
+		<hikaricp.version>3.6.1</hikaricp.version>
 		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
 		<xmemcached.version>1.4.1</xmemcached.version>
 		<mongo-java-driver.version>2.12.4</mongo-java-driver.version>
@@ -210,6 +211,11 @@
 				<groupId>com.googlecode.xmemcached</groupId>
 				<artifactId>xmemcached</artifactId>
 				<version>${xmemcached.version}</version>
+			</dependency>
+			<dependency><!-- JDBC Connection Pool -->
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${hikaricp.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>mysql</groupId>
