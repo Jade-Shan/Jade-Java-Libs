@@ -52,7 +52,7 @@
 		<jett-maven-plg.version>9.3.0.M2</jett-maven-plg.version>
 		<cargo-maven2.version>1.4.8</cargo-maven2.version>
 		<!-- data -->
-		<hikaricp.version>2.6.3</hikaricp.version>
+		<hikaricp.version>3.2.0</hikaricp.version>
 		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
 		<xmemcached.version>1.4.1</xmemcached.version>
 		<mongo-java-driver.version>2.12.4</mongo-java-driver.version>
