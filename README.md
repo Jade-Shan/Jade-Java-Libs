@@ -1,10 +1,55 @@
 Jade-Java-libs
 ======================
 
+Base pom for all my java project. Defines:
+
+* all libs and version
+* rule for unit test class name
+* scop dependencies
+* remote maven repository
+
+Config
+----------------------
+
+### Unit Test Rules
+
+inclues:
+
+* `**/*Test.java`
+* `**/*Spec.java`
+* `**/UnitTestSuite.java`
+
+excludes:
+
+* `**/Abstract*.java`
+* `**/*IntegrationTest.java`
+* `**/*Tests.java`
+
+### Deploy by profile
+
+Pre-define 4 profiles:
+
+#### `dev` for developing
+
+#### `prd` for online production env
+
+#### `dpl` for deploy in private maven server
+
+Compile scope and runtime scope is provided for save space in 
+private maven server.
+
+#### `rls` for deploy in oss.sonatype.org maven repo
+
+Set maven server to oss.sonatype.org
+
+
+
 TODO
 ----------------------
 
 ### 1.0.11-SNAPSHOT
+
+* remove profile filter file from base profile
 
 Change logs
 ----------------------
