@@ -50,6 +50,7 @@ TODO
 ### 1.0.11-SNAPSHOT
 
 * remove profile filter file from base profile
+* change sqlite jdbc driver maven dependency from test-scop to compile-scop
 
 Change logs
 ----------------------
