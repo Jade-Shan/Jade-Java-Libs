@@ -52,6 +52,25 @@ TODO
 * remove profile filter file from base profile
 * change sqlite jdbc driver maven dependency from test-scop to compile-scop
 
+add lib:
+
+* hamcrest-all
+* dd-plist
+* jackson-databind
+* commons-lang3
+* slf4j-api
+* slf4j-simple
+* slf4j-jdk14
+
+update lib version:
+
+* jopt-simple
+* jackson-mapper-asl
+* jsoup
+* slf4j
+* sqlite-jdbc
+
+
 Change logs
 ----------------------
 
