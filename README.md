@@ -51,6 +51,8 @@ TODO
 
 * remove profile filter file from base profile
 * change sqlite jdbc driver maven dependency from test-scop to compile-scop
+* commons-fileupload update version 1.3.3
+* spring update version 4.3.21.RELEASE
 
 add lib:
 
