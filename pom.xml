@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.jade-dungeon</groupId>
 	<artifactId>jadelibs-java</artifactId>
-	<version>1.0.10</version>
+	<version>1.0.11</version>
 	<packaging>pom</packaging>
 	<name>java lib base</name>
 	<description>My Persional Java Lib configure</description>
@@ -28,8 +30,8 @@
 		<connection>scm:git:git@github.com:Jade-Shan/Jade-Java-Libs.git</connection>
 		<developerConnection>scm:git:git@github.com:Jade-Shan/Jade-Java-Libs.git</developerConnection>
 		<url>git@github.com:Jade-Shan/Jade-Java-Libs.git</url>
-	  <tag>jadelibs-java-1.0.7</tag>
-  </scm>
+		<tag>jadelibs-java-1.0.7</tag>
+	</scm>
 
 	<properties>
 		<charset.encoding>UTF-8</charset.encoding>
@@ -43,16 +45,19 @@
 		<!-- test -->
 		<junit.version>4.10</junit.version>
 		<junit-interface.version>0.10</junit-interface.version>
+		<hamcrest-all.version>1.3</hamcrest-all.version>
+		<dd-plist.version>1.21</dd-plist.version>
 		<greenmail.version>1.3.1b</greenmail.version>
 		<!-- jsp/servlet -->
-		<springframework.version>3.0.5.RELEASE</springframework.version>
+		<springframework.version>4.3.21.RELEASE</springframework.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<jsp-api.version>2.3.1</jsp-api.version>
 		<jstl.version>1.2.5</jstl.version>
 		<jett-maven-plg.version>9.3.0.M2</jett-maven-plg.version>
 		<cargo-maven2.version>1.4.8</cargo-maven2.version>
 		<!-- data -->
-		<sqlitejdbc.version>3.8.11.2</sqlitejdbc.version>
+		<hikaricp.version>3.2.0</hikaricp.version>
+		<sqlite-jdbc.version>3.23.1</sqlite-jdbc.version>
 		<xmemcached.version>1.4.1</xmemcached.version>
 		<mongo-java-driver.version>2.12.4</mongo-java-driver.version>
 		<mysql-connector-java.version>5.1.13</mysql-connector-java.version>
@@ -60,21 +65,27 @@
 		<!-- log -->
 		<logback.version>1.0.13</logback.version>
 		<log4j.version>1.2.17</log4j.version>
-		<slf4j.version>1.7.5</slf4j.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<javamelody.version>1.68.1</javamelody.version>
 		<!-- parser -->
-		<jsoup.version>1.8.1</jsoup.version>
+		<jsoup.version>1.11.3</jsoup.version>
 		<json.version>20140107</json.version>
-		<jackson-mapper-asl.version>1.7.1</jackson-mapper-asl.version>
+		<jackson-mapper-asl.version>1.9.13</jackson-mapper-asl.version>
+		<jackson-databind.version>2.9.6</jackson-databind.version>
 		<!-- 3rd libs -->
 		<rhino.version>1.7R4</rhino.version>
 		<javadiffutils.version>1.2.1</javadiffutils.version>
 		<ezvcard.version>0.9.9</ezvcard.version>
 		<kaptcha.version>2.3.2</kaptcha.version>
 		<commons-lang.version>2.6</commons-lang.version>
-		<commons-io.version>2.4</commons-io.version>
-		<commons-fileupload.version>1.3</commons-fileupload.version>
+		<commons-lang3.version>3.8</commons-lang3.version>
+		<commons-io.version>2.6</commons-io.version>
+		<!--  
+		<commons-fileupload.version>[1.3.3,)</commons-fileupload.version>
+					-->
+		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
-		<jopt-simple.version>4.4</jopt-simple.version>
+		<jopt-simple.version>4.9</jopt-simple.version>
 		<javassist.version>3.4.GA</javassist.version>
 		<httpclient.version>4.3.6</httpclient.version>
 		<javamail.version>1.4.1</javamail.version>
@@ -91,13 +102,38 @@
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-jdk14</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.bull.javamelody</groupId>
+				<artifactId>javamelody-core</artifactId>
+				<version>${javamelody.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.code.kaptcha</groupId>
@@ -123,6 +159,11 @@
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
 				<version>${commons-dbcp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson-databind.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.codehaus.jackson</groupId>
@@ -205,6 +246,11 @@
 				<artifactId>xmemcached</artifactId>
 				<version>${xmemcached.version}</version>
 			</dependency>
+			<dependency><!-- JDBC Connection Pool -->
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${hikaricp.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
@@ -242,15 +288,9 @@
 				<artifactId>ez-vcard</artifactId>
 				<version>${ezvcard.version}</version>
 			</dependency>
-			<!-- 
-			<dependency>
-				<groupId>org.opencv</groupId>
-				<artifactId>opencv</artifactId>
-				<version>${opencv.version}</version>
-				<systemPath>${opencv.path}</systemPath>
-				<scope>system</scope>
-			</dependency>
-					 -->
+			<!-- <dependency> <groupId>org.opencv</groupId> <artifactId>opencv</artifactId> 
+				<version>${opencv.version}</version> <systemPath>${opencv.path}</systemPath> 
+				<scope>system</scope> </dependency> -->
 			<dependency>
 				<groupId>org.jsoup</groupId>
 				<artifactId>jsoup</artifactId>
@@ -279,8 +319,7 @@
 			<dependency>
 				<groupId>org.xerial</groupId>
 				<artifactId>sqlite-jdbc</artifactId>
-				<version>${sqlitejdbc.version}</version>
-				<scope>test</scope>
+				<version>${sqlite-jdbc.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.mail</groupId>
@@ -311,6 +350,17 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-all</artifactId>
+				<version>${hamcrest-all.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.plist</groupId>
+				<artifactId>dd-plist</artifactId>
+				<version>${dd-plist.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>com.icegreen</groupId>
 				<artifactId>greenmail</artifactId>
 				<version>${greenmail.version}</version>
@@ -319,7 +369,8 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<dependencies> </dependencies>
+	<dependencies>
+	</dependencies>
 
 	<build>
 		<pluginManagement>
@@ -364,7 +415,7 @@
 
 		<plugins>
 			<!-- =========================== -->
-			<!--   copy resources            -->
+			<!-- copy resources -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -374,7 +425,7 @@
 				</configuration>
 			</plugin>
 			<!-- =========================== -->
-			<!--   compile java              -->
+			<!-- compile java -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -394,7 +445,7 @@
 				</executions>
 			</plugin>
 			<!-- =========================== -->
-			<!--        surefire test        -->
+			<!-- surefire test -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -402,6 +453,7 @@
 				<configuration>
 					<includes>
 						<include>**/*Test.java</include>
+						<include>**/*Spec.java</include>
 						<include>**/UnitTestSuite.java</include>
 					</includes>
 					<excludes>
@@ -412,19 +464,23 @@
 				</configuration>
 			</plugin>
 			<!-- =========================== -->
-			<!--        jacoco plugin        -->
+			<!-- jacoco plugin -->
 			<!-- =========================== -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<goals><goal>prepare-agent</goal></goals>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
 					</execution>
 					<execution>
 						<id>report</id>
 						<phase>test</phase>
-						<goals><goal>report</goal></goals>
+						<goals>
+							<goal>report</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
@@ -436,31 +492,18 @@
 	</build>
 
 	<!-- =========================== -->
-	<!-- different env               -->
+	<!-- different env -->
 	<!-- =========================== -->
 	<profiles>
 		<profile>
 			<id>dev</id>
-			<activation><activeByDefault>true</activeByDefault></activation>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<properties>
 				<profiles.scope.compile>compile</profiles.scope.compile>
 				<profiles.scope.runtime>runtime</profiles.scope.runtime>
 			</properties>
-			<build>
-				<filters><filter>params-dev.properties</filter></filters>
-				<!-- 
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<includes><include>**/AllTestSuite.java</include></includes>
-							<excludes><exclude>**/*Tests.java</exclude></excludes>
-						</configuration>
-					</plugin>
-				</plugins>
-						 -->
-			</build>
 		</profile>
 		<profile>
 			<id>dpl</id>
@@ -468,9 +511,6 @@
 				<profiles.scope.compile>provided</profiles.scope.compile>
 				<profiles.scope.runtime>provided</profiles.scope.runtime>
 			</properties>
-			<build>
-				<filters><filter>params-prd.properties</filter></filters>
-			</build>
 		</profile>
 		<profile>
 			<id>prd</id>
@@ -478,9 +518,6 @@
 				<profiles.scope.compile>compile</profiles.scope.compile>
 				<profiles.scope.runtime>runtime</profiles.scope.runtime>
 			</properties>
-			<build>
-				<filters><filter>params-prd.properties</filter></filters>
-			</build>
 		</profile>
 		<profile>
 			<id>rls</id>
@@ -489,7 +526,6 @@
 				<profiles.scope.runtime>provided</profiles.scope.runtime>
 			</properties>
 			<build>
-				<filters><filter>params-prd.properties</filter></filters>
 				<plugins>
 					<!-- Source -->
 					<plugin>
@@ -499,7 +535,9 @@
 						<executions>
 							<execution>
 								<phase>package</phase>
-								<goals><goal>jar-no-fork</goal></goals>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
 							</execution>
 						</executions>
 					</plugin>
@@ -511,7 +549,9 @@
 						<executions>
 							<execution>
 								<phase>package</phase>
-								<goals><goal>jar</goal></goals>
+								<goals>
+									<goal>jar</goal>
+								</goals>
 							</execution>
 						</executions>
 					</plugin>
@@ -524,7 +564,9 @@
 							<execution>
 								<id>sign-artifacts</id>
 								<phase>verify</phase>
-								<goals><goal>sign</goal></goals>
+								<goals>
+									<goal>sign</goal>
+								</goals>
 								<configuration>
 									<keyname>C97AEB0C</keyname>
 									<passphraseServerId>C97AEB0C</passphraseServerId>
@@ -562,7 +604,7 @@
 	</profiles>
 
 	<!-- =========================== -->
-	<!--       reporting             -->
+	<!-- reporting -->
 	<!-- =========================== -->
 	<reporting>
 		<outputDirectory>target/site</outputDirectory>

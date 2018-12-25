@@ -1,14 +1,89 @@
 Jade-Java-libs
 ======================
 
+Base pom for all my java project. Defines:
+
+* all libs and version
+* rule for unit test class name
+* scop dependencies
+* remote maven repository
+
+Config
+----------------------
+
+### Unit Test Rules
+
+inclues:
+
+* `**/*Test.java`
+* `**/*Spec.java`
+* `**/UnitTestSuite.java`
+
+excludes:
+
+* `**/Abstract*.java`
+* `**/*IntegrationTest.java`
+* `**/*Tests.java`
+
+### Deploy by profile
+
+Pre-define 4 profiles:
+
+#### `dev` for developing
+
+#### `prd` for online production env
+
+#### `dpl` for deploy in private maven server
+
+Compile scope and runtime scope is provided for save space in 
+private maven server.
+
+#### `rls` for deploy in oss.sonatype.org maven repo
+
+Set maven server to oss.sonatype.org
+
+
+
 TODO
 ----------------------
 
-### 1.0.10-SNAPSHOT
+### 1.0.11-SNAPSHOT
 
-* add slf4j-log4j12
-* add slf4j-simple
-* add junit-interface
+* remove profile filter file from base profile
+* change sqlite jdbc driver maven dependency from test-scop to compile-scop
+* commons-fileupload update version 1.3.3
+* spring update version 4.3.21.RELEASE
+
+add lib:
+
+* hamcrest-all
+* dd-plist
+* jackson-databind
+* commons-lang3
+* slf4j-api
+* slf4j-simple
+* slf4j-jdk14
+
+update lib version:
+
+* jopt-simple
+* jackson-mapper-asl
+* jsoup
+* slf4j
+* sqlite-jdbc
+
+
+Change logs
+----------------------
+
+### 1.0.10
+
+* :heavy_plus_sign: add hikaricp as JDBC Connection Pool framework
+* :heavy_plus_sign: add slf4j-log4j12
+* :heavy_plus_sign: add slf4j-simple
+* :heavy_plus_sign: add junit-interface
+* :heavy_plus_sign: add javamelody
+* :wrench: change junit test case postfix: add `**/*Spec.java`
 
 提交说明
 -------------------
