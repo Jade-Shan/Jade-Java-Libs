@@ -47,30 +47,34 @@ Set maven server to oss.sonatype.org
 TODO
 ----------------------
 
-### 1.0.11-SNAPSHOT
+### 1.0.12
 
-* remove profile filter file from base profile
-* change sqlite jdbc driver maven dependency from test-scop to compile-scop
-* commons-fileupload update version 1.3.3
-* spring update version 4.3.21.RELEASE
+* :heavy_plus_sign: javamelody update version 1.75.0
+
+### 1.0.11
+
+* :fire: remove profile filter file from base profile
+* :wrench: change sqlite jdbc driver maven dependency from test-scop to compile-scop
 
 add lib:
 
-* hamcrest-all
-* dd-plist
-* jackson-databind
-* commons-lang3
-* slf4j-api
-* slf4j-simple
-* slf4j-jdk14
+* :heavy_plus_sign: hamcrest-all
+* :heavy_plus_sign: dd-plist
+* :heavy_plus_sign: jackson-databind
+* :heavy_plus_sign: commons-lang3
+* :heavy_plus_sign: slf4j-api
+* :heavy_plus_sign: slf4j-simple
+* :heavy_plus_sign: slf4j-jdk14
 
 update lib version:
 
-* jopt-simple
-* jackson-mapper-asl
-* jsoup
-* slf4j
-* sqlite-jdbc
+* :arrow_up: jopt-simple
+* :arrow_up: jackson-mapper-asl
+* :arrow_up: jsoup
+* :arrow_up: slf4j
+* :arrow_up: sqlite-jdbc
+* :arrow_up: commons-fileupload update version 1.3.3
+* :arrow_up: spring update version 4.3.21.RELEASE
 
 
 Change logs
