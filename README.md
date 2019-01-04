@@ -49,6 +49,8 @@ TODO
 
 ### 1.0.13-SNAPSHOT
 
+* :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
+
 
 ### 1.0.12
 
