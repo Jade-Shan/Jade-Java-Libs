@@ -44,19 +44,19 @@ Set maven server to oss.sonatype.org
 
 
 
-TODO
-----------------------
+change log
+=========================
 
-### 1.0.13-SNAPSHOT
+## 1.0.13-SNAPSHOT
 
 * :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
 
 
-### 1.0.12
+## 1.0.12
 
 * :heavy_plus_sign: javamelody update version 1.75.0
 
-### 1.0.11
+## 1.0.11
 
 * :fire: remove profile filter file from base profile
 * :wrench: change sqlite jdbc driver maven dependency from test-scop to compile-scop
@@ -81,11 +81,7 @@ update lib version:
 * :arrow_up: commons-fileupload update version 1.3.3
 * :arrow_up: spring update version 4.3.21.RELEASE
 
-
-Change logs
-----------------------
-
-### 1.0.10
+## 1.0.10
 
 * :heavy_plus_sign: add hikaricp as JDBC Connection Pool framework
 * :heavy_plus_sign: add slf4j-log4j12
@@ -95,7 +91,7 @@ Change logs
 * :wrench: change junit test case postfix: add `**/*Spec.java`
 
 提交说明
--------------------
+=====================
 
 developing
 
