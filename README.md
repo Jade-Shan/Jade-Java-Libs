@@ -50,6 +50,7 @@ change log
 ## 1.0.13-SNAPSHOT
 
 * :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
+* :heavy_plus_sign: greenmail version update version from 1.5.9
 
 * :pencil2: remove duplicate declaration of slf4j
 

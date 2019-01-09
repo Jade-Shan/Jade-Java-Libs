@@ -47,7 +47,7 @@
 		<junit-interface.version>0.10</junit-interface.version>
 		<hamcrest-all.version>1.3</hamcrest-all.version>
 		<dd-plist.version>1.21</dd-plist.version>
-		<greenmail.version>1.3.1b</greenmail.version>
+		<greenmail.version>1.5.9</greenmail.version>
 		<!-- jsp/servlet -->
 		<springframework.version>4.3.21.RELEASE</springframework.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
