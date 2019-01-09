@@ -51,6 +51,8 @@ change log
 
 * :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
 
+* :pencil2: remove duplicate declaration of slf4j
+
 
 ## 1.0.12
 
