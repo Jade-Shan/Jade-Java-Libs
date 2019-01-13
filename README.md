@@ -51,6 +51,7 @@ change log
 
 * :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
 * :heavy_plus_sign: greenmail version update version from 1.5.9
+* :heavy_plus_sign: jackson-databing version update version 2.9.8+
 
 * :pencil2: remove duplicate declaration of slf4j
 
