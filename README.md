@@ -33,7 +33,7 @@ Pre-define 4 profiles:
 
 #### `prd` for online production env
 
-#### `dpl` for deploy in private maven server
+#### `dpl` for deploy in private maven repo 
 
 Compile scope and runtime scope is provided for save space in 
 private maven server.
@@ -44,14 +44,25 @@ Set maven server to oss.sonatype.org
 
 
 
-TODO
-----------------------
+change log
+=========================
 
-### 1.0.12
+## 1.0.13
+
+* :arrow_up: javamail version update version from 1.4.1 to 1.4.7
+* :arrow_up: greenmail version update version from 1.5.9
+* :arrow_up: jackson-databing version update version 2.9.9
+
+* :heavy_plus_sign: add fastjson 1.2.58
+
+* :pencil2: remove duplicate declaration of slf4j
+
+
+## 1.0.12
 
 * :heavy_plus_sign: javamelody update version 1.75.0
 
-### 1.0.11
+## 1.0.11
 
 * :fire: remove profile filter file from base profile
 * :wrench: change sqlite jdbc driver maven dependency from test-scop to compile-scop
@@ -76,11 +87,7 @@ update lib version:
 * :arrow_up: commons-fileupload update version 1.3.3
 * :arrow_up: spring update version 4.3.21.RELEASE
 
-
-Change logs
-----------------------
-
-### 1.0.10
+## 1.0.10
 
 * :heavy_plus_sign: add hikaricp as JDBC Connection Pool framework
 * :heavy_plus_sign: add slf4j-log4j12
@@ -90,7 +97,7 @@ Change logs
 * :wrench: change junit test case postfix: add `**/*Spec.java`
 
 提交说明
--------------------
+=====================
 
 developing
 
