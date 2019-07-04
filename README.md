@@ -33,7 +33,7 @@ Pre-define 4 profiles:
 
 #### `prd` for online production env
 
-#### `dpl` for deploy in private maven server
+#### `dpl` for deploy in private maven repo 
 
 Compile scope and runtime scope is provided for save space in 
 private maven server.
@@ -49,9 +49,11 @@ change log
 
 ## 1.0.13-SNAPSHOT
 
-* :heavy_plus_sign: javamail version update version from 1.4.1 to 1.4.7
-* :heavy_plus_sign: greenmail version update version from 1.5.9
-* :heavy_plus_sign: jackson-databing version update version 2.9.8+
+* :arrow_up: javamail version update version from 1.4.1 to 1.4.7
+* :arrow_up: greenmail version update version from 1.5.9
+* :arrow_up: jackson-databing version update version 2.9.9
+
+* :heavy_plus_sign: add fastjson 1.2.58
 
 * :pencil2: remove duplicate declaration of slf4j
 

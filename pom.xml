@@ -74,7 +74,8 @@
 		<!-- 
 		<jackson-databind.version>[2.9.8,)</jackson-databind.version>
 		 -->
-		<jackson-databind.version>2.9.8</jackson-databind.version>
+		<jackson-databind.version>2.9.9</jackson-databind.version>
+		<fastjson.version>1.2.58</fastjson.version>
 		<!-- 3rd libs -->
 		<rhino.version>1.7R4</rhino.version>
 		<javadiffutils.version>1.2.1</javadiffutils.version>
@@ -157,6 +158,11 @@
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
 				<version>${commons-dbcp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
