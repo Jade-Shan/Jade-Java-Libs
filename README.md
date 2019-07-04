@@ -47,7 +47,7 @@ Set maven server to oss.sonatype.org
 change log
 =========================
 
-## 1.0.13-SNAPSHOT
+## 1.0.13
 
 * :arrow_up: javamail version update version from 1.4.1 to 1.4.7
 * :arrow_up: greenmail version update version from 1.5.9
