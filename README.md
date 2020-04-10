@@ -49,6 +49,8 @@ change log
 
 ## 1.0.14-SNAPSHOT
 
+* :heavy_plus_sign: add jsr-250 java-annotation-api
+
 ## 1.0.13
 
 * :arrow_up: javamail version update version from 1.4.1 to 1.4.7
