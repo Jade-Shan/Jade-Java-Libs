@@ -47,6 +47,13 @@ Set maven server to oss.sonatype.org
 change log
 =========================
 
+## 1.0.14
+
+* :heavy_plus_sign: add jsr-250 java-annotation-api
+
+* :arrow_up: mysql-connection-j update to 8.0.19
+* :arrow_up: jackson-databind.version update to 2.9.10.4
+
 ## 1.0.13
 
 * :arrow_up: javamail version update version from 1.4.1 to 1.4.7
