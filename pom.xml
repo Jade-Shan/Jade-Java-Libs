@@ -6,7 +6,7 @@
 
 	<groupId>net.jade-dungeon</groupId>
 	<artifactId>jadelibs-java</artifactId>
-	<version>1.0.14</version>
+	<version>1.0.15-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>java lib base</name>
 	<description>My Persional Java Lib configure</description>
