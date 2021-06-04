@@ -96,7 +96,7 @@
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<jopt-simple.version>4.9</jopt-simple.version>
 		<javassist.version>3.4.GA</javassist.version>
-		<httpclient.version>4.3.6</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<javamail.version>1.4.7</javamail.version>
 		<commonscli.version>1.3</commonscli.version>
 		<ddnsjava.version>2.1.6</ddnsjava.version>
