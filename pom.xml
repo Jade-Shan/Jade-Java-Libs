@@ -80,7 +80,7 @@
 		<jackson-databind.version>[2.9.8,)</jackson-databind.version>
 		 -->
 		<jackson-databind.version>2.9.10.4</jackson-databind.version>
-		<fastjson.version>1.2.58</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<!-- 3rd libs -->
 		<rhino.version>1.7R4</rhino.version>
 		<javadiffutils.version>1.2.1</javadiffutils.version>
