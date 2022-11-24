@@ -66,7 +66,7 @@
 		<mysql-connector-java.version>5.1.13</mysql-connector-java.version>
 		 -->
 		<mysql-connector-java.version>8.0.19</mysql-connector-java.version>
-		<hibernate.version>3.6.1.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 		<!-- log -->
 		<logback.version>1.0.13</logback.version>
 		<log4j.version>1.2.17</log4j.version>
